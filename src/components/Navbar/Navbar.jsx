@@ -1,38 +1,40 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
+    const location = useLocation();
+
+    const navbarClass = location.pathname === '/'
+        ? 'bg-uniqueColor text-white  '
+        : 'bg-white ';
+
     const links = <>
         <NavLink
             to="/"
-            className={({ isActive }) =>
-                isActive ? "bg-uniqueColor" : "text-white"
-            }
+            className={({ isActive }) => (isActive ? 'text-white font-bold' : '')}
         >
             Home
         </NavLink>
         <NavLink
             to="/gadget"
-            className={({ isActive }) =>
-                isActive ? "bg-uniqueColor" : "text-white"
-            }
+            className={({ isActive }) => (isActive ? 'text-uniqueColor font-bold' : '')}
         >
             Gradgets
         </NavLink>
         <NavLink
             to="/dashboard"
-            className={({ isActive }) =>
-                isActive ? "bg-uniqueColor" : "text-white"
-            }
+            className={({ isActive }) => (isActive ? 'text-uniqueColor font-bold' : '')}
         >
             Dashboard
         </NavLink>
     </>
+
+
     return (
-        <section className='bg-uniqueColor text-white'>
+        <section className={`${navbarClass}`}>
             <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -63,12 +65,13 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <FontAwesomeIcon icon={faCartShopping} />
-                    <FontAwesomeIcon icon={faHeart} />
+                <div className="navbar-end gap-3">
+                    <FontAwesomeIcon className='rounded-full p-2 bg-white text-black'
+                        icon={faCartShopping} />
+                    <FontAwesomeIcon className='rounded-full p-2 bg-white text-black' icon={faHeart} />
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
 

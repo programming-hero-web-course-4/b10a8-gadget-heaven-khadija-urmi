@@ -10,6 +10,9 @@ export default {
         uniqueColor: ' #9538E2',
         btnPrimary: '#740098',
       },
+      lineHeight: {
+        'extra-loose': '60px',
+      },
     },
   },
   plugins: [
