@@ -1,8 +1,12 @@
+import { NavLink } from "react-router-dom";
+import Banner from "../../components/Banner/Banner";
+
 
 const Home = () => {
     return (
         <div>
-            This is Home
+            <NavLink />
+            <Banner />
         </div>
     );
 };
