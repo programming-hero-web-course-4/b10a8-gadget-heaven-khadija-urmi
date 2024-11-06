@@ -1,0 +1,24 @@
+{
+    "categories": [
+        {
+            "category_id": "C001",
+            "name": "Smartphones",
+            "description": "Latest smartphones with cutting-edge technology."
+        },
+        {
+            "category_id": "C002",
+            "name": "Laptops",
+            "description": "High-performance laptops for work, gaming, and creativity."
+        },
+        {
+            "category_id": "C003",
+            "name": "Headphones",
+            "description": "Wireless and wired headphones for immersive sound."
+        },
+        {
+            "category_id": "C004",
+            "name": "Smartwatches",
+            "description": "Advanced smartwatches for fitness and convenience."
+        }
+    ]
+}

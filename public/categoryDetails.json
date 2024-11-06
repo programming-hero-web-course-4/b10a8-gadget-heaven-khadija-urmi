@@ -1,0 +1,240 @@
+[
+    {
+        "product_id": "P001",
+        "product_title": "Apple iPhone 15 Pro Max",
+        "product_image": "https://i.ibb.co.com/nsWJzX8/Apple-i-Phone-16-Pro-hero-geo-240909-inline-jpg-large.jpg",
+        "category": "Smartphones",
+        "price": 1299,
+        "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+        "specification": [
+            "6.7-inch Super Retina XDR display",
+            "A17 Bionic chip",
+            "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+            "LiDAR Scanner",
+            "Up to 2TB storage"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P002",
+        "product_title": "Samsung Galaxy S23 Ultra",
+        "product_image": "https://i.ibb.co.com/nsWJzX8/Apple-i-Phone-16-Pro-hero-geo-240909-inline-jpg-large.jpg",
+        "category": "Smartphones",
+        "price": 1199,
+        "description": "Top-of-the-line Android smartphone with incredible camera capabilities.",
+        "specification": [
+            "6.8-inch QHD+ Dynamic AMOLED 2X display",
+            "Snapdragon 8 Gen 2 processor",
+            "200MP ultra-clear camera",
+            "5000mAh battery",
+            "Stylus support"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P003",
+        "product_title": "Google Pixel 7 Pro",
+        "product_image": "https://i.ibb.co.com/nsWJzX8/Apple-i-Phone-16-Pro-hero-geo-240909-inline-jpg-large.jpg",
+        "category": "Smartphones",
+        "price": 899,
+        "description": "Google's flagship smartphone with pure Android experience.",
+        "specification": [
+            "6.7-inch QHD+ LTPO OLED display",
+            "Google Tensor G2 chip",
+            "Triple-camera system with 50MP main sensor",
+            "Titan M2 security",
+            "24-hour battery life"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "P004",
+        "product_title": "OnePlus 11",
+        "product_image": "https://i.ibb.co.com/nsWJzX8/Apple-i-Phone-16-Pro-hero-geo-240909-inline-jpg-large.jpg",
+        "category": "Smartphones",
+        "price": 699,
+        "description": "High-performance smartphone with a sleek design.",
+        "specification": [
+            "6.7-inch 120Hz Fluid AMOLED display",
+            "Snapdragon 8 Gen 2 processor",
+            "5000mAh battery with 80W fast charging",
+            "50MP triple camera",
+            "5G enabled"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": "P005",
+        "product_title": "Sony Xperia 1 IV",
+        "product_image": "https://i.ibb.co.com/nsWJzX8/Apple-i-Phone-16-Pro-hero-geo-240909-inline-jpg-large.jpg",
+        "category": "Smartphones",
+        "price": 1099,
+        "description": "Sony's flagship smartphone with advanced camera features.",
+        "specification": [
+            "6.5-inch 4K HDR OLED display",
+            "Snapdragon 8 Gen 1",
+            "12MP triple camera with variable zoom",
+            "Cinematography Pro app",
+            "5G enabled"
+        ],
+        "availability": false,
+        "rating": 4.3
+    },
+    {
+        "product_id": "P006",
+        "product_title": "Xiaomi 13 Pro",
+        "product_image": "https://i.ibb.co.com/nsWJzX8/Apple-i-Phone-16-Pro-hero-geo-240909-inline-jpg-large.jpg",
+        "category": "Smartphones",
+        "price": 899,
+        "description": "Flagship smartphone with impressive display and camera.",
+        "specification": [
+            "6.73-inch QHD+ AMOLED display",
+            "Snapdragon 8 Gen 2",
+            "120W fast charging",
+            "50MP Leica triple camera",
+            "5000mAh battery"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P007",
+        "product_title": "Dell XPS 15",
+        "product_image": "https://i.ibb.co.com/0s3bb0K/laptop.jpg",
+        "category": "Laptops",
+        "price": 1599,
+        "description": "High-performance laptop with a stunning 4K display.",
+        "specification": [
+            "15.6-inch 4K UHD display",
+            "Intel Core i9 processor",
+            "32GB RAM, 1TB SSD",
+            "NVIDIA GTX 1650 Ti GPU",
+            "Up to 20 hours battery life"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P008",
+        "product_title": "MacBook Pro 16",
+        "product_image": "https://i.ibb.co.com/0s3bb0K/laptop.jpg",
+        "category": "Laptops",
+        "price": 2499,
+        "description": "Apple's flagship laptop for professionals.",
+        "specification": [
+            "16-inch Liquid Retina XDR display",
+            "Apple M1 Pro chip",
+            "16GB RAM, 512GB SSD",
+            "Up to 21 hours battery life",
+            "Six-speaker sound system"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "P009",
+        "product_title": "Asus ROG Zephyrus G14",
+        "product_image": "https://i.ibb.co.com/0s3bb0K/laptop.jpg",
+        "category": "Laptops",
+        "price": 1499,
+        "description": "High-performance gaming laptop with an ultra-slim design.",
+        "specification": [
+            "14-inch WQHD display",
+            "AMD Ryzen 9 processor",
+            "32GB RAM, 1TB SSD",
+            "NVIDIA RTX 3060 GPU",
+            "RGB backlit keyboard"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P010",
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.ibb.co.com/XVzHX0p/bluetoothheadphones.jpg",
+        "category": "Headphones",
+        "price": 399,
+        "description": "Industry-leading noise cancellation and superior sound quality.",
+        "specification": [
+            "30-hour battery life",
+            "Noise cancellation with adaptive sound control",
+            "Touch sensor controls",
+            "Bluetooth 5.2",
+            "Quick charge for 5 hours playback in 10 mins"
+        ],
+        "availability": false,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P011",
+        "product_title": "Apple Watch Series 10",
+        "product_image": "https://i.ibb.co.com/tMRR2NR/Apple-watch.jpg",
+        "category": "Smartwatches",
+        "price": 399,
+        "description": "The latest Apple Watch featuring advanced health monitoring and seamless integration with iOS devices.",
+        "specification": [
+            "1.9-inch Always-On Retina display",
+            "S9 SiP with 64-bit dual-core processor",
+            "Blood Oxygen and ECG apps",
+            "Water-resistant up to 50 meters",
+            "Up to 18 hours of battery life"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P012",
+        "product_title": "Samsung Galaxy Watch 7",
+        "product_image": "https://i.ibb.co.com/tMRR2NR/Apple-watch.jpg",
+        "category": "Smartwatches",
+        "price": 349,
+        "description": "Samsung's latest smartwatch with comprehensive health tracking and a sleek design.",
+        "specification": [
+            "1.5-inch Super AMOLED display",
+            "Exynos W1000 chipset",
+            "Sleep apnea detection",
+            "Water-resistant up to 50 meters",
+            "Up to 40 hours of battery life"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P013",
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.ibb.co.com/XVzHX0p/bluetoothheadphones.jpg",
+        "category": "Headphones",
+        "price": 399,
+        "description": "Industry-leading noise cancellation and superior sound quality.",
+        "specification": [
+            "30-hour battery life",
+            "Noise cancellation with adaptive sound control",
+            "Touch sensor controls",
+            "Bluetooth 5.2",
+            "Quick charge for 5 hours playback in 10 mins"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P014",
+        "product_title": "Bose QuietComfort 45",
+        "product_image": "https://i.ibb.co.com/XVzHX0p/bluetoothheadphones.jpg",
+        "category": "Headphones",
+        "price": 329,
+        "description": "Bose’s most advanced noise-cancelling headphones.",
+        "specification": [
+            "Up to 24 hours battery life",
+            "Quiet and Aware modes",
+            "Bluetooth 5.1",
+            "Lightweight and comfortable design",
+            "USB-C charging"
+        ],
+        "availability": true,
+        "rating": 4.5
+    }
+]
