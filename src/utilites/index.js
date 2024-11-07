@@ -1,5 +1,19 @@
+//adding items to cart
+const getCartItem = () => {
+    const carts = localStorage.getItem('cartItem');
+    return carts ? JSON.parse(carts) : [];
+}
 
 
+const addToCartItem = (gadget) => {
+    const cartItems = getCartItem();
+    const isHasItem = cartItems.find(cart => cart.product_id === gadget.product_id);
+    if (isHasItem) return alert("Item already added in cart");
+    cartItems.push(gadget);
+    localStorage.setItem('cartItem', JSON.stringify(cartItems));
+    alert('Successfully added in cart!')
+
+}
 
 
 const getWishItem = () => {
@@ -10,13 +24,11 @@ const getWishItem = () => {
 const addToWishItem = (gadget) => {
     const wishItem = getWishItem();
     const isHasItem = wishItem.find(item => item.product_id === gadget.product_id);
-
-    if (isHasItem) return alert("Item already added");
-
+    if (isHasItem) return alert("Item already added in wishlist");
     wishItem.push(gadget);
     localStorage.setItem('wishItem', JSON.stringify(wishItem));
-    alert('Successfully added!')
+    alert('Successfully added wishlist!')
 
 };
 
-export { addToWishItem, getWishItem };
+export { addToWishItem, getWishItem, getCartItem, addToCartItem };

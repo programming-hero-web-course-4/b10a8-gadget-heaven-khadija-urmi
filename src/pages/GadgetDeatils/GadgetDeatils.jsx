@@ -3,7 +3,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import { addToWishItem } from "../../utilites";
+import { addToCartItem, addToWishItem } from "../../utilites";
 
 
 
@@ -11,7 +11,7 @@ const GadgetDeatils = () => {
     const gadgetData = useLoaderData();
     const { gadgetId } = useParams();
     const [gadget, setGadget] = useState({});
-    // const [isInWishlist, setIsInWishlist] = useState(false);
+    const [isInWishlist, setIsInWishlist] = useState(false);
 
     useEffect(() => {
         const singleGadget = gadgetData.find(item => item.product_id == gadgetId)
@@ -26,6 +26,10 @@ const GadgetDeatils = () => {
 
     const handleAddToWishlist = (gadget) => {
         addToWishItem(gadget);
+        setIsInWishlist(true);
+    }
+    const handleAddToCart = (gadget) => {
+        addToCartItem(gadget);
     }
     return (
         <div className="card lg:card-side flex items-start p-8 bg-white rounded-lg shadow-lg border-solid border-gray-100  w-full max-w-5xl mx-auto">
@@ -63,13 +67,13 @@ const GadgetDeatils = () => {
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-amber-400" />
                     </div>
                     <div className="flex items-center space-x-4 mt-6">
-                        <button className="px-6 py-3 bg-uniqueColor text-white rounded-full flex items-center space-x-2">
+                        <button onClick={() => handleAddToCart(gadget)} className="px-6 py-3 bg-uniqueColor text-white rounded-full flex items-center space-x-2">
                             <span>Add to Cart</span>
                             <FontAwesomeIcon className="text-white" icon={faCartShopping} />
                         </button>
-                        <button onClick={() => handleAddToWishlist(gadget)}
+                        <button disabled={isInWishlist} onClick={() => handleAddToWishlist(gadget)} className={`cursor-pointer ${isInWishlist ? "cursor-not-allowed" : ""}`}
                         >
-                            <FontAwesomeIcon className="text-black cursor-pointer" icon={faHeart} />
+                            <FontAwesomeIcon className={`${isInWishlist ? "text-gray-400" : "text-black"} cursor-pointer`} icon={faHeart} />
                         </button>
                     </div>
                 </div>

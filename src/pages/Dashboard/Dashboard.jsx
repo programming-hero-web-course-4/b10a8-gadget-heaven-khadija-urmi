@@ -13,13 +13,10 @@ const Dashboard = () => {
                     Cart</button>
 
                 <button onClick={() => { setActiveTab("WishList") }}
-                    className={` w-[200px] px-4 py-2 rounded border-2 ${activeTab === "WishList" ? 'bg-white text-uniqueColor border-uniqueColor' : 'bg-uniqueColor  text-white border-white'}`} >Wish List</button>
+                    className={` w-[200px] px-4 py-2 rounded-lg border-2 ${activeTab === "WishList" ? 'bg-white text-uniqueColor border-uniqueColor' : 'bg-uniqueColor   text-white '}`} >Wish List</button>
             </div>
-            {/* <div className="tab-content">
-                {activeTab === "Cart" && <Cart />}
-                {activeTab === "WishList" && <WishList />}
-            </div> */}
             {activeTab === "WishList" && <WishList />}
+            {activeTab === "Cart" && <Cart />}
         </div>
     );
 };
