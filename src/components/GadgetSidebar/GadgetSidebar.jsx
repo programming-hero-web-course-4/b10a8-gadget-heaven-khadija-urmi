@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 const GadgetSidebar = ({ categories }) => {
-    console.log(categories);
+
     return (
         <aside
             role="tablist"

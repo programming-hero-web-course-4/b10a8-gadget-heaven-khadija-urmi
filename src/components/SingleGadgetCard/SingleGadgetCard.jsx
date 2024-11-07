@@ -4,8 +4,8 @@ const SingleGadgetCard = ({ gadget }) => {
     const navigate = useNavigate();
     const { product_id, product_title,
         product_image, category, price, description } = gadget;
-    console.log(product_id, product_title,
-        product_image, category, price, description);
+    //console.log(product_id, product_title,
+    // product_image, category, price, description);
 
     const handleCardDetails = () => {
         navigate(`/gadget/${product_id}`);

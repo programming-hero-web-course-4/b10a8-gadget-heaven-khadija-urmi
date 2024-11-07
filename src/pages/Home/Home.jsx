@@ -6,7 +6,6 @@ import Header from "../../components/Header/Header";
 
 const Home = () => {
     const categoryName = useLoaderData();
-    console.log(categoryName);
     return (
         <div>
             <NavLink />
