@@ -10,7 +10,9 @@ const addToCartItem = (gadget) => {
     const isHasItem = cartItems.find(cart => cart.product_id === gadget.product_id);
     if (isHasItem) return alert("Item already added in cart");
     cartItems.push(gadget);
+
     localStorage.setItem('cartItem', JSON.stringify(cartItems));
+
     alert('Successfully added in cart!')
 
 }
