@@ -30,6 +30,12 @@ const Navbar = () => {
         >
             Dashboard
         </NavLink>
+        <NavLink
+            to="/statistics"
+            className={({ isActive }) => (isActive ? 'text-uniqueColor font-bold' : '')}
+        >
+            Statistics
+        </NavLink>
     </>
 
 
