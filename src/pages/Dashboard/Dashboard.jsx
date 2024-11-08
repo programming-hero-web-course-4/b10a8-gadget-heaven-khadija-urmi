@@ -2,9 +2,12 @@ import { useState } from 'react';
 import WishList from '../../components/WishList/WishList';
 import Cart from '../../components/Cart/Cart';
 
+
+
 const Dashboard = () => {
 
-    const [activeTab, setActiveTab] = useState("WishList");
+    const [activeTab, setActiveTab] = useState("Cart");
+
     return (
         <div>
             <div className='tabs flex justify-center space-x-4'>

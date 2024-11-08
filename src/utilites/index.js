@@ -10,11 +10,15 @@ const addToCartItem = (gadget) => {
     const isHasItem = cartItems.find(cart => cart.product_id === gadget.product_id);
     if (isHasItem) return alert("Item already added in cart");
     cartItems.push(gadget);
-
     localStorage.setItem('cartItem', JSON.stringify(cartItems));
-
     alert('Successfully added in cart!')
 
+}
+const removeItemsCart = id => {
+    const cartList = getCartItem();
+    const remaining = cartList.filter(cart => cart.product_id != id);
+    localStorage.setItem('cartItem', JSON.stringify(remaining));
+    alert('Successfully removed');
 }
 
 
@@ -33,4 +37,6 @@ const addToWishItem = (gadget) => {
 
 };
 
-export { addToWishItem, getWishItem, getCartItem, addToCartItem };
+
+
+export { addToWishItem, getWishItem, getCartItem, addToCartItem, removeItemsCart };
