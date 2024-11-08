@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import { removeItemsCart, getCartItem } from "../../utilites";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+    const navigate = useNavigate();
+
     const [cart, setCart] = useState([]);
     const [prices, setPrices] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,6 +24,8 @@ const Cart = () => {
         };
         fetchData();
     }, []);
+
+
     const handleRemoveData = (id) => {
         removeItemsCart(id);
         const updatedCart = getCartItem();
@@ -40,8 +46,36 @@ const Cart = () => {
             <div className="flex justify-between m-3"><h2 className="text-2xl font-bold ml-6">Cart</h2>
                 <div className="flex items-center space-x-4">
                     <h3 className="text-2xl font-bold">Total Price:{prices}</h3>
+
                     <button onClick={() => handleSortItem()} className="px-7 py-3 border-2 border-solid border-uniqueColor rounded-full text-uniqueColor font-semibold text-lg">Sort By Price</button>
-                    <button className="px-7 py-3  bg-uniqueColor rounded-full text-white font-semibold text-lg">Purchase</button>
+                    {/* Purchase Modal */}
+                    <div>
+                        <button className="px-8 py-3 bg-uniqueColor rounded-full text-white font-semibold text-lg" onClick={() => setIsOpen(true)}>Purchase </button>
+                        {isOpen && (
+                            <div id="my_modal_1" className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50" style={{ zIndex: 50 }}>
+                                <div className="modal-box bg-white p-6 rounded-lg shadow-lg">
+                                    <h3 className="font-bold text-lg">Payment Successful</h3>
+                                    <p className="py-4">Thanks for purchasing.<br />
+                                        Total: 2449.96
+                                    </p>
+                                    <div className="modal-action">
+                                        <button
+                                            className="btn flex items-center justify-center"
+                                            onClick={() => {
+                                                localStorage.removeItem('cartItem');
+                                                setIsOpen(false);
+                                                setPrices(0);
+                                                setCart([]);
+                                                navigate('/');
+                                            }}
+                                        >
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
             <div className="grid grid-cols-1  gap-6 my-12">
@@ -60,6 +94,7 @@ const Cart = () => {
                                 <p className="text-gray-700 text-xl font-semibold 
                             mt-2">Price: ${item.price}</p>
                             </div>
+                            {/* Remove Item Button */}
                             <button onClick={() => { handleRemoveData(item.product_id) }} className="absolute p-2 m-2 rounded-full border-solid border-2 border-red-500 top-2 right-2 flex items-center justify-center w-8 h-8">
                                 <FontAwesomeIcon className="text-red-500 text-xl" icon={faXmark} />
                             </button>

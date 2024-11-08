@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import SingleGadgetCard from "../SingleGadgetCard/SingleGadgetCard";
 import { useEffect, useState } from "react";
 
+
 const GadgetCards = () => {
     const gadgetData = useLoaderData() || [];;
     const { categoryName } = useParams();
@@ -21,10 +22,12 @@ const GadgetCards = () => {
 
     return (
         <>
-            <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                {gadgets.map(gadget => (
-                    <SingleGadgetCard key={gadget.product_id} gadget={gadget}></SingleGadgetCard>
-                ))}
+            <div>
+                <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                    {gadgets.map(gadget => (
+                        <SingleGadgetCard key={gadget.product_id} gadget={gadget}></SingleGadgetCard>
+                    ))}
+                </div>
             </div>
         </>
     );
