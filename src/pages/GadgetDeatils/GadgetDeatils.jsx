@@ -4,6 +4,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { addToCartItem, addToWishItem } from "../../utilites";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 
 
@@ -19,8 +20,7 @@ const GadgetDeatils = () => {
     }, [gadgetData, gadgetId])
 
     if (!gadget) {
-        return <p>Gadget not found.</p>;
-        // will show an error page
+        return <ErrorPage></ErrorPage>;
     }
     const { product_title, product_image, price, description, specification = [] } = gadget;
 

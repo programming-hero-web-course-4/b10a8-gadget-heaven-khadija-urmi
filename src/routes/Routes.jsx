@@ -5,11 +5,13 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import AllGadget from "../pages/AllGadget/AllGadget";
 import GadgetCards from "../components/GadgetCards/GadgetCards";
 import GadgetDeatils from "../pages/GadgetDeatils/GadgetDeatils";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: '/',
