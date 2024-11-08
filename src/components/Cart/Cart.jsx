@@ -3,6 +3,7 @@ import { removeItemsCart, getCartItem } from "../../utilites";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import sucessImg from "../../assets/Group.png";
 
 const Cart = () => {
     const navigate = useNavigate();
@@ -53,14 +54,15 @@ const Cart = () => {
                         <button className="px-8 py-3 bg-uniqueColor rounded-full text-white font-semibold text-lg" onClick={() => setIsOpen(true)}>Purchase </button>
                         {isOpen && (
                             <div id="my_modal_1" className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50" style={{ zIndex: 50 }}>
-                                <div className="modal-box bg-white p-6 rounded-lg shadow-lg">
-                                    <h3 className="font-bold text-lg">Payment Successful</h3>
-                                    <p className="py-4">Thanks for purchasing.<br />
-                                        Total: 2449.96
+                                <div className="modal-box bg-white p-6 rounded-lg shadow-lg text-center">
+                                    <img className="w-14 h-14  max-w-xs mx-auto mb-4 " src={sucessImg} />
+                                    <h3 className="font-bold text-2xl">Payment Successful</h3>
+                                    <p className="text-lg py-4">Thanks for purchasing.<br />
+                                        Total: {prices}
                                     </p>
-                                    <div className="modal-action">
+                                    <div className="modal-action ">
                                         <button
-                                            className="btn flex items-center justify-center"
+                                            className="btn max-w-2xl mx-auto bg-uniqueColor text-white px-7 py-3 "
                                             onClick={() => {
                                                 localStorage.removeItem('cartItem');
                                                 setIsOpen(false);

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { addToCartItem, addToWishItem } from "../../utilites";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import { Helmet } from "react-helmet-async";
+import Header from "../../components/Header/Header";
 
 
 const GadgetDeatils = () => {
@@ -36,6 +37,8 @@ const GadgetDeatils = () => {
             <Helmet>
                 <title>Details</title>
             </Helmet>
+            <Header className="bg-white" title="Product Details" subtitle="Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"></Header>
+
             <div className="card lg:card-side flex items-start p-8 bg-white rounded-lg shadow-lg border-solid border-gray-100  w-full max-w-5xl mx-auto">
                 <figure>
                     <img className="w-[450px] h-[550px] object-contain rounded-md"
